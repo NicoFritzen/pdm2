@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import '../models/product.dart';
 import 'product_detail_screen.dart';
 
+/// Lista de produtos com busca e rolagem.
+///
+/// Nesta versão (desafio1-raw), o estado NÃO é preservado ao navegar:
+/// a ida para o detalhe usa [Navigator.pushReplacement], descartando esta
+/// rota e o [State] associado (controllers de texto e de scroll).
 class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
 
@@ -11,14 +16,16 @@ class ProductListScreen extends StatefulWidget {
 
 class _ProductListScreenState extends State<ProductListScreen> {
   final TextEditingController _searchController = TextEditingController();
-  // 1. Controller dedicado para manipular e resetar a rolagem
   final ScrollController _scrollController = ScrollController();
   bool _hasText = false;
 
   final List<Product> _allProducts = List.generate(
     100,
-    (index) =>
-        Product(id: index + 1, title: 'Produto ${index + 1}', price: 0.0),
+    (index) => Product(
+      id: index + 1,
+      title: 'Produto ${index + 1}',
+      price: (index + 1) * 10.0,
+    ),
   );
 
   List<Product> _filteredProducts = [];
@@ -58,7 +65,6 @@ class _ProductListScreenState extends State<ProductListScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Barra de pesquisa
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 16.0,
@@ -90,8 +96,6 @@ class _ProductListScreenState extends State<ProductListScreen> {
                 ),
               ),
             ),
-
-            // Lista com scrollbar azul visível e reset de estado ao voltar
             Expanded(
               child: _filteredProducts.isEmpty
                   ? const Center(
@@ -100,13 +104,10 @@ class _ProductListScreenState extends State<ProductListScreen> {
                         style: TextStyle(color: Colors.grey),
                       ),
                     )
-                  : // Substitua o bloco do RawScrollbar dentro do Expanded por:
-                    RawScrollbar(
+                  : RawScrollbar(
                       controller: _scrollController,
                       thumbVisibility: true,
-                      thumbColor: Colors
-                          .grey
-                          .shade400, // Tom cinza neutro no lugar do azul
+                      thumbColor: Colors.grey.shade400,
                       thickness: 6.0,
                       radius: const Radius.circular(10.0),
                       child: ListView.builder(
@@ -118,17 +119,16 @@ class _ProductListScreenState extends State<ProductListScreen> {
                           final product = _filteredProducts[index];
                           return InkWell(
                             onTap: () {
-                              Navigator.push(
+                              // Substitui a rota atual: o State desta lista
+                              // é descartado (dispose) e o estado se perde.
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      ProductDetailScreen(product: product),
+                                  builder: (context) => ProductDetailScreen(
+                                    product: product,
+                                  ),
                                 ),
-                              ).then((_) {
-                                if (_scrollController.hasClients) {
-                                  _scrollController.jumpTo(0.0);
-                                }
-                              });
+                              );
                             },
                             child: Align(
                               alignment: Alignment.centerLeft,
