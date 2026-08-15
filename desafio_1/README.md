@@ -1,17 +1,20 @@
-# desafio_1
+# desafio_1 — Preservação de Estado na Navegação
 
-A new Flutter project.
+Aplicativo Flutter do Desafio 1 (PDM2): lista de 100 produtos com busca e
+tela de detalhe, demonstrando perda e preservação de estado.
 
-## Getting Started
+## Branches
 
-This project is a starting point for a Flutter application.
+- `desafio1-raw` — problema (estado perdido ao voltar)
+- `desafio1-solved` — solução (`push` / `pop` preservam o `State`)
 
-A few resources to get you started if this is your first Flutter project:
+## Documentação
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Leia o guia completo em [docs/preservacao-de-estado.md](docs/preservacao-de-estado.md).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Executar
+
+```bash
+flutter pub get
+flutter run
+```

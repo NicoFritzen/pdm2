@@ -4,9 +4,9 @@ import 'product_detail_screen.dart';
 
 /// Lista de produtos com busca e rolagem.
 ///
-/// Nesta versão (desafio1-raw), o estado NÃO é preservado ao navegar:
-/// a ida para o detalhe usa [Navigator.pushReplacement], descartando esta
-/// rota e o [State] associado (controllers de texto e de scroll).
+/// Nesta versão (desafio1-solved), o estado É preservado ao navegar:
+/// [Navigator.push] empilha o detalhe sem descartar esta rota, então o
+/// [State] (controllers de texto e de scroll) continua vivo ao voltar.
 class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
 
@@ -119,9 +119,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
                           final product = _filteredProducts[index];
                           return InkWell(
                             onTap: () {
-                              // Substitui a rota atual: o State desta lista
-                              // é descartado (dispose) e o estado se perde.
-                              Navigator.pushReplacement(
+                              // Empilha o detalhe sem remover esta rota:
+                              // o State permanece montado e o estado se mantém.
+                              Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => ProductDetailScreen(
