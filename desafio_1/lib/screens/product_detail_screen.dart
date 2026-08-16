@@ -3,10 +3,24 @@ import '../models/product.dart';
 
 /// Tela de detalhes do produto (versão com preservação de estado).
 ///
-/// O retorno usa o comportamento padrão do [Navigator] ([Navigator.pop]),
-/// mantendo a rota da lista viva na pilha — com isso, o [State] anterior
-/// (rolagem e busca) permanece intacto.
+/// # Desempilhamento (pop)
+///
+/// Não customizamos o botão voltar. O [AppBar] detecta que há rota anterior
+/// na pilha e adiciona o ícone automaticamente. Ao tocar, o Flutter chama
+/// [Navigator.pop], que REMOVE só esta tela do topo:
+///
+/// - Antes do pop: `[Lista, Detalhe]`
+/// - Depois do pop: `[Lista]`
+///
+/// A lista nunca foi destruída → [State] intacto → preservação de estado.
+///
+/// # Passagem de parâmetros
+///
+/// O [product] chega pelo construtor (tipado). Alternativa comum seria
+/// `ModalRoute.of(context)!.settings.arguments`, mas o construtor é mais
+/// claro e seguro em tempo de compilação.
 class ProductDetailScreen extends StatelessWidget {
+  /// Produto selecionado na lista (parâmetro da navegação).
   final Product product;
 
   const ProductDetailScreen({super.key, required this.product});
@@ -17,8 +31,9 @@ class ProductDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(product.title),
         centerTitle: true,
-        // Sem leading customizado: o Flutter adiciona o botão de voltar
-        // automaticamente e chama Navigator.pop, preservando a lista.
+        // Sem [leading] customizado de propósito:
+        // um leading que fizesse pushReplacement(ProductListScreen())
+        // recriaria a lista e PERDERIA o estado (abordagem da branch raw).
       ),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
