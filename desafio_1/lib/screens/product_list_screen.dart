@@ -4,9 +4,22 @@ import 'product_detail_screen.dart';
 
 /// Lista de produtos com busca e rolagem.
 ///
-/// Nesta versão (desafio1-raw), o estado NÃO é preservado ao navegar:
-/// a ida para o detalhe usa [Navigator.pushReplacement], descartando esta
-/// rota e o [State] associado (controllers de texto e de scroll).
+/// # Perda de estado (versão raw — demonstração do problema)
+///
+/// Esta tela é [StatefulWidget] e guarda:
+/// - texto da busca ([TextEditingController]);
+/// - posição da rolagem ([ScrollController]);
+/// - lista filtrada e flag do botão limpar.
+///
+/// Ao abrir o detalhe usamos [Navigator.pushReplacement] (SUBSTITUIÇÃO),
+/// NÃO [Navigator.push] (empilhamento). A rota da lista sai da pilha e o
+/// Flutter chama [dispose] neste [State] → controllers morrem → estado some.
+///
+/// Ao “voltar”, o detalhe cria uma [ProductListScreen] NOVA. Scroll no topo
+/// e busca vazia. Não usamos [ScrollController.jumpTo] para forçar o reset:
+/// a perda vem de descartar a rota de verdade.
+///
+/// A solução (branch `desafio1-solved`) troca isso por push + pop.
 class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
 
@@ -17,8 +30,11 @@ class ProductListScreen extends StatefulWidget {
 class _ProductListScreenState extends State<ProductListScreen> {
   final TextEditingController _searchController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
+
+  /// Controla se o ícone "X" da busca aparece.
   bool _hasText = false;
 
+  /// Fonte completa mockada (100 itens).
   final List<Product> _allProducts = List.generate(
     100,
     (index) => Product(
@@ -28,6 +44,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
     ),
   );
 
+  /// Resultado atual do filtro (o que a [ListView] exibe).
   List<Product> _filteredProducts = [];
 
   @override
@@ -35,6 +52,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
     super.initState();
     _filteredProducts = _allProducts;
 
+    // A cada digitação, setState reconstrói a UI com o filtro aplicado.
     _searchController.addListener(() {
       final query = _searchController.text.toLowerCase();
       setState(() {
@@ -48,6 +66,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
 
   @override
   void dispose() {
+    // Na versão raw, dispose RODA ao ir para o detalhe (rota substituída).
+    // Na versão solved (push), dispose NÃO rodaria nesse momento.
     _searchController.dispose();
     _scrollController.dispose();
     super.dispose();
@@ -65,6 +85,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
       body: SafeArea(
         child: Column(
           children: [
+            // ----- Barra de busca -----
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 16.0,
@@ -96,6 +117,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                 ),
               ),
             ),
+            // ----- Lista com scrollbar -----
             Expanded(
               child: _filteredProducts.isEmpty
                   ? const Center(
@@ -119,8 +141,12 @@ class _ProductListScreenState extends State<ProductListScreen> {
                           final product = _filteredProducts[index];
                           return InkWell(
                             onTap: () {
-                              // Substitui a rota atual: o State desta lista
-                              // é descartado (dispose) e o estado se perde.
+                              // SUBSTITUIÇÃO (pushReplacement) — NÃO é empilhamento:
+                              // Pilha antes: [ProductListScreen]
+                              // Pilha depois: [ProductDetailScreen]
+                              //
+                              // A lista sai da pilha → dispose → estado perdido.
+                              // Passagem de parâmetro: [Product] no construtor.
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(

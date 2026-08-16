@@ -4,15 +4,28 @@ import 'product_list_screen.dart';
 
 /// Tela de detalhes do produto (versão com perda de estado).
 ///
-/// Ao voltar, a lista é recriada do zero com [Navigator.pushReplacement],
-/// o que descarta o [State] anterior (rolagem e texto da busca).
+/// # Por que não usamos pop?
+///
+/// A lista chegou aqui via [Navigator.pushReplacement], então NÃO há rota
+/// anterior na pilha. Um [Navigator.pop] simples não restauraria a lista
+/// com o estado antigo — ela já foi descartada.
+///
+/// # “Voltar” nesta branch
+///
+/// [_voltarSemPreservarEstado] faz outro [pushReplacement] criando uma
+/// [ProductListScreen] NOVA. É como recomeçar a lista do zero.
+///
+/// [PopScope] intercepta o botão voltar do sistema (Android) para o mesmo
+/// comportamento do ícone do [AppBar].
 class ProductDetailScreen extends StatelessWidget {
+  /// Produto selecionado (parâmetro da navegação).
   final Product product;
 
   const ProductDetailScreen({super.key, required this.product});
 
-  /// Recria a lista sem restaurar o contexto anterior.
+  /// Recria a lista sem restaurar scroll/busca anteriores.
   void _voltarSemPreservarEstado(BuildContext context) {
+    // Substitui o detalhe por uma lista nova (estado inicial).
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -24,6 +37,7 @@ class ProductDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopScope(
+      // Impede o pop padrão (não há lista “debaixo” com estado salvo).
       canPop: false,
       onPopInvokedWithResult: (didPop, result) {
         if (didPop) {
