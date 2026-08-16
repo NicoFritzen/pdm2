@@ -2,6 +2,23 @@ import 'package:flutter/material.dart';
 import '../models/gallery_image.dart';
 
 /// Segunda tela: recebe a imagem selecionada por parâmetro no construtor.
+///
+/// # Passagem de parâmetros
+///
+/// [image] veio do [Navigator.push] feito no card do carrossel:
+/// `ImageDetailScreen(image: image)`. Todo o objeto [GalleryImage] chega
+/// tipado (não precisamos buscar de novo na lista).
+///
+/// # Desempilhamento (pop)
+///
+/// O [AppBar] adiciona o voltar automaticamente e chama [Navigator.pop].
+/// A rota do carrossel, que estava por baixo na pilha, volta a aparecer
+/// com o mesmo [_currentIndex] (preservação de estado da tela anterior).
+///
+/// # Imagem da web vs assets
+///
+/// Aqui usamos [Image.network]. Com assets, seria:
+/// `Image.asset(image.imageUrl, fit: BoxFit.cover)` após declarar no pubspec.
 class ImageDetailScreen extends StatelessWidget {
   final GalleryImage image;
 
@@ -13,6 +30,7 @@ class ImageDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(image.title),
         centerTitle: true,
+        // Voltar padrão = Navigator.pop (desempilha esta rota).
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -20,26 +38,41 @@ class ImageDetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16.0),
-                child: AspectRatio(
-                  aspectRatio: 3 / 2,
+              AspectRatio(
+                aspectRatio: 3 / 2,
+                child: Material(
+                  // Fundo preto evita cantinhos cinzas no canto arredondado.
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(16.0),
+                  clipBehavior: Clip.antiAlias,
                   child: Image.network(
+                    // Troque por Image.asset(image.imageUrl) se usar assets.
                     image.imageUrl,
                     fit: BoxFit.cover,
+                    width: double.infinity,
+                    height: double.infinity,
                     loadingBuilder: (context, child, progress) {
                       if (progress == null) {
                         return child;
                       }
-                      return const Center(
-                        child: CircularProgressIndicator(),
+                      return const ColoredBox(
+                        color: Colors.black,
+                        child: Center(
+                          child: CircularProgressIndicator(
+                            color: Colors.white70,
+                          ),
+                        ),
                       );
                     },
                     errorBuilder: (context, error, stackTrace) {
-                      return ColoredBox(
-                        color: Colors.grey.shade300,
-                        child: const Center(
-                          child: Icon(Icons.broken_image_outlined, size: 48),
+                      return const ColoredBox(
+                        color: Colors.black87,
+                        child: Center(
+                          child: Icon(
+                            Icons.broken_image_outlined,
+                            size: 48,
+                            color: Colors.white54,
+                          ),
                         ),
                       );
                     },

@@ -1,9 +1,14 @@
 import '../models/gallery_image.dart';
 
-/// Coleção mockada da galeria.
+/// Coleção mockada da galeria (lista usada pelo [PageView]).
 ///
-/// As URLs apontam para [picsum.photos](https://picsum.photos), com IDs
-/// fixos para que a mesma foto apareça sempre (útil em demonstrações).
+/// URLs do [picsum.photos](https://picsum.photos) com IDs fixos → a mesma
+/// foto aparece sempre (bom para demos e prints).
+///
+/// # Versão com assets (exemplo mental)
+///
+/// Em vez de `https://picsum.photos/...`, você usaria caminhos locais:
+/// `imageUrl: 'assets/images/floresta.jpg'`, e na UI `Image.asset(...)`.
 const List<GalleryImage> galleryImages = [
   GalleryImage(
     id: 1,
