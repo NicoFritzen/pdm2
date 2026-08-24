@@ -1,4 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Galeria no Android 13+ (API 33). O Photo Picker moderno muitas vezes
+         não exige isso, mas mantemos para aparelhos que usam o seletor antigo. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!-- Galeria no Android 12 e anteriores (API 32-). maxSdkVersion evita
+         pedir armazenamento amplo à toa no Android 13+. -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
     <application
         android:label="desafio_2"
         android:name="${applicationName}"
