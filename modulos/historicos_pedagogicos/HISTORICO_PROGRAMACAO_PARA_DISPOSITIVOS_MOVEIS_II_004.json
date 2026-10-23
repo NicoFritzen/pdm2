@@ -1,0 +1,95 @@
+{
+  "tipo": "HISTORICO_TUTORALUNO",
+  "schema": "HISTORICO_TUTORALUNO 1.0",
+  "tutor": "TutorAluno_031",
+  "prompt_base": "PB-2026-42",
+  "disciplina": "Programação para Dispositivos Móveis II",
+  "versao_historico": 4,
+  "controle_progressao": {
+    "modulos_concluidos": [
+      "00",
+      "03",
+      "04",
+      "05"
+    ],
+    "ultimo_modulo_trabalhado": "05",
+    "ultimo_modulo_concluido": "05",
+    "modulo_pendente": null,
+    "status_modulo_pendente": null,
+    "proximo_modulo_liberado": "SIM",
+    "proximo_modulo_esperado": "PROXIMO_MODULO_FORNECIDO_PELO_ALUNO",
+    "acao_necessaria": "ENVIAR_PROXIMO_MODULO"
+  },
+  "perfil_pedagogico": {
+    "competencias_consolidadas": [
+      "Listas Flutter e navegação.",
+      "Layout responsivo lista-detalhe.",
+      "Animações implícitas e explícitas.",
+      "AnimatedContainer com seleção visual.",
+      "AnimationController, Tween, ScaleTransition e ciclo de vida.",
+      "Repetição e interrupção; cláusula de guarda.",
+      "Modelagem documental NoSQL orientada às consultas.",
+      "Uso de ObjectId estável em CRUD.",
+      "Integração Flutter → API REST Node.js/Express → MongoDB.",
+      "CRUD persistente em MongoDB com inclusão, consulta, alteração e exclusão.",
+      "Consulta por campo aninhado e ordenação por preço.",
+      "Verificação de persistência após fechar e reabrir o aplicativo.",
+      "Diagnóstico de falha de conexão distinguindo API parada de estado persistido no banco."
+    ],
+    "competencias_em_desenvolvimento": [
+      "Implementação integral autônoma de animação explícita.",
+      "Concorrência assíncrona além da cláusula de guarda.",
+      "Acessibilidade e preferência por movimento reduzido.",
+      "Precisão conceitual sobre atomicidade em operações que atingem múltiplos documentos.",
+      "Escolha de representação monetária robusta, como centavos inteiros ou Decimal128."
+    ],
+    "dificuldades_recorrentes": [
+      "Sintaxe de APIs Flutter exigiu pistas curtas em módulos anteriores.",
+      "Imprecisão conceitual pontual ao descrever atomicidade de updateMany."
+    ],
+    "erros_recorrentes": [
+      "Histórico anterior menciona dificuldades com Map e setState; não reincidiram claramente neste módulo."
+    ],
+    "tendencia_autonomia": "CRESCENTE; no módulo 05 demonstrou autonomia alta em modelagem, integração, CRUD, testes e diagnóstico de falha real.",
+    "padrao_ajuda": "Responde bem à decomposição em passos. No módulo 05, realizou as atividades sem pedir ajuda de conteúdo.",
+    "retencao": [
+      "Reutilizou estado/identificação de registros em fluxo de edição e exclusão.",
+      "Confirmou persistência após reabrir o app e recuperar o mesmo documento pelo backend."
+    ],
+    "transferencia": [
+      "Relacionou padrão de consulta à decisão de embutir dados do autor.",
+      "Explicou custo de duplicação e estratégia de atualização coerente.",
+      "Transferiu o uso de ID estável para inclusão, edição e exclusão.",
+      "Diagnosticou uma falha de infraestrutura sem confundi-la com perda de dados."
+    ],
+    "pontos_para_revisao": [
+      "Separar lógica de carregamento do controlador.",
+      "Revisar reversão e interrupção em dispositivo real.",
+      "Revisar acessibilidade e código completo.",
+      "Atomicidade por documento no MongoDB e implicações de updateMany.",
+      "Representação de valores monetários em MongoDB/Flutter."
+    ],
+    "prerequisitos_futuros": [
+      "StatefulWidget e ciclo de vida.",
+      "Gerenciamento de estado e operações assíncronas.",
+      "Persistência NoSQL e CRUD por ID estável.",
+      "Consultas orientadas ao modelo documental."
+    ]
+  },
+  "historico_modulos": [
+    {
+      "numero": "05",
+      "identificador": "PDMII-DESAFIO05-NOSQL-2026-01",
+      "execucao": "MOD05_EXEC_001",
+      "status": "CONCLUIDO",
+      "resumo": "Modelagem orientada a consultas, MongoDB via API REST, CRUD completo, persistência após reabertura e diagnóstico de falha de conexão demonstrados.",
+      "tentativas_administrativas": 1
+    }
+  ],
+  "metadados_compatibilidade": {
+    "origem_historico_anterior": "HISTORICO_PROGRAMACAO_DISPOSITIVOS_MOVEIS_II_003.json",
+    "tutor_anterior": "TutorAluno_031",
+    "prompt_base_anterior": "PB-2026-42",
+    "observacao": "Histórico anterior preservado e ampliado com a conclusão do módulo 05."
+  }
+}
