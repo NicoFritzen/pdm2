@@ -1,0 +1,70 @@
+{
+  "tipo": "HISTORICO_TUTORALUNO",
+  "schema": "HISTORICO_TUTORALUNO 1.0",
+  "tutor": "TutorAluno_031",
+  "prompt_base": "PB-2026-42",
+  "disciplina": "Programação para Dispositivos Móveis II",
+  "versao_historico": 3,
+  "controle_progressao": {
+    "modulos_concluidos": [
+      "00",
+      "03",
+      "04"
+    ],
+    "ultimo_modulo_trabalhado": "04",
+    "ultimo_modulo_concluido": "04",
+    "modulo_pendente": null,
+    "status_modulo_pendente": "NENHUM",
+    "proximo_modulo_liberado": "SIM",
+    "proximo_modulo_esperado": "PROXIMO_MODULO_FORNECIDO_PELO_ALUNO",
+    "acao_necessaria": "ENVIAR_PROXIMO_MODULO"
+  },
+  "perfil_pedagogico": {
+    "competencias_consolidadas": [
+      "Listas Flutter e navegação do histórico anterior",
+      "Layout responsivo lista-detalhe",
+      "Animações implícitas e explícitas",
+      "AnimatedContainer com seleção visual",
+      "AnimationController, Tween, ScaleTransition e ciclo de vida",
+      "Repetição e interrupção; cláusula de guarda",
+      "Testes funcionais e defesa de animações comunicativas"
+    ],
+    "competencias_em_desenvolvimento": [
+      "Implementação integral autônoma de animação explícita",
+      "Concorrência assíncrona além da cláusula de guarda",
+      "Acessibilidade e preferência por movimento reduzido"
+    ],
+    "dificuldades_recorrentes": [
+      "Sintaxe de APIs Flutter exigiu pistas curtas em algumas etapas"
+    ],
+    "erros_recorrentes": [
+      "Histórico anterior menciona dificuldades com Map e setState; não reincidiram claramente neste módulo"
+    ],
+    "tendencia_autonomia": "CRESCENTE; respostas técnicas autorais após apoio pontual",
+    "padrao_ajuda": "Decomposição em passos; orientação mais intensa em concorrência",
+    "retencao": [
+      "Reutilizou setState e seleção do módulo 03",
+      "Aplicou cláusula de guarda em teste posterior"
+    ],
+    "transferencia": [
+      "Preservou seleção após recarga",
+      "Relacionou movimento à informação necessária ao usuário"
+    ],
+    "pontos_para_revisao": [
+      "Separar lógica de carregamento do controlador",
+      "Revisar reversão e interrupção em dispositivo real",
+      "Revisar acessibilidade e código completo"
+    ],
+    "prerequisitos_futuros": [
+      "StatefulWidget e ciclo de vida",
+      "Gerenciamento de estado e operações assíncronas"
+    ]
+  },
+  "ultimo_modulo": {
+    "numero": "04",
+    "identificador": "PDMII-DESAFIO04-ANIMACAO-2026-01",
+    "execucao": "MOD04_EXEC_001",
+    "status": "CONCLUIDO",
+    "evidencias": "Código parcial, respostas e testes relatados; não houve inspeção independente"
+  }
+}

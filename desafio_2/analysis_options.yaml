@@ -1,0 +1,17 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # O log de createState mora no próprio createState — é o ponto
+    # pedagógico do ciclo de vida (createState → initState → ...).
+    no_logic_in_create_state: false
+
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**

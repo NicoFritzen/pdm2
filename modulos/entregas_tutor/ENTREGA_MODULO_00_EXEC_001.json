@@ -1,0 +1,254 @@
+{
+  "tipo": "ENTREGA_TUTORALUNO",
+  "schema": "ENTREGA_TUTORALUNO 1.0",
+  "tutor": {
+    "arquivo": "TutorAluno_028",
+    "prompt_base_id": "PB-2026-TUTOR-39",
+    "prompt_base_versao": "PB-2026-39"
+  },
+  "disciplina": "Programação de Dispositivos Móveis II",
+  "modulo": {
+    "numero": "00",
+    "titulo": "Diagnóstico Prático de Dart e Flutter",
+    "identificador": "PDMII-M00-DIAGNOSTICO-DART-FLUTTER-2026-01"
+  },
+  "compatibilidade_execucao": {
+    "tutor_declarado_no_modulo": "TutorAluno_029",
+    "base_declarada_no_modulo": "PB-2026-40",
+    "gerador_declarado_no_modulo": "PGM-INTEGRADO-2026-03 (021-R1)",
+    "tutor_em_execucao": "TutorAluno_028",
+    "base_em_execucao": "PB-2026-39",
+    "status_compatibilidade_versao": "VERSAO_DIVERGENTE_EXECUTADA",
+    "observacao": "Divergência apenas informativa; o contrato funcional do módulo permitiu execução normal."
+  },
+  "execucao": {
+    "identificador_execucao": "MOD00_EXEC_001",
+    "token_original": "M1.1Qo_-N9_e80WO3jSDyISLY9KFBiDDPkTkgtXnx56HsORvQLtf1qTBt76m0vDfCdpenCDWLrLfGSwuYLTOPwZ70hneqKQx7Hdo-6WQDauuToo-Kb6t-idNglfiMPAqYUIVYViLe-mgdOovQwj96T9Z5uNmJ4CXqxHZXENgHvNGG8EUdcmvctxgPVju0K0FHsdAQ-jnRg31vpjeBPuYEgxPKpHnMu4184xsfsw7DWqfxusfdYLzH3JVIozDEQ",
+    "status_modulo": "CONCLUIDO",
+    "motivo_encerramento": "CRITERIOS_DIAGNOSTICOS_SATISFEITOS",
+    "conclusao_pedagogica": "SIM",
+    "tipo_entrega": "COMPLETA",
+    "progresso_pedagogico_percentual": 100,
+    "percentual_efetivamente_realizado": 100,
+    "modo_acompanhamento": "GUIADO",
+    "ritmo": "PADRAO"
+  },
+  "avaliacao_cobertura": {
+    "desempenho_trecho_realizado": "Diagnóstico completo. Dart apresentou fundamentos frequentes com lacunas em assincronismo e pequenos erros de acesso a Map. Flutter apresentou compreensão de composição e atualização de estado, com lacunas em TextField/setState, navegação completa e decodificação JSON.",
+    "objetivos_centrais_trabalhados_percentual": 100,
+    "objetivos_centrais_demonstrados_percentual": 100,
+    "objetivos_secundarios_demonstrados_percentual": 0,
+    "objetivos_preparatorios_demonstrados_percentual": 0,
+    "teto_por_progresso_0_10": 10,
+    "teto_por_objetivo_central_0_10": 10,
+    "nota_final_tecnica_0_10": null,
+    "observacao_nota": "O módulo diagnóstico não define nota mínima, pesos ou aprovação; não foi inventada nota."
+  },
+  "mapa_objetivos": [
+    {
+      "id": "OD",
+      "tipo": "CENTRAL",
+      "descricao": "Diagnosticar o uso de Dart para interpretar, produzir e corrigir trechos pequenos.",
+      "peso_pedagogico_percentual": null,
+      "status": "DEMONSTRADO_COM_LACUNAS",
+      "cobertura_percentual": 100,
+      "qualidade_evidencia": "Intermediária no escopo diagnóstico: bom desempenho em listas, funções, classes e null safety; dificuldade relevante em Future/async/await e erro pontual de acesso a Map.",
+      "autonomia": "MAJORITARIAMENTE_AUTONOMO",
+      "ajuda_maxima": "SEM_AJUDA_DE_CONTEUDO",
+      "retencao": "NAO_AVALIADA_SEPARADAMENTE",
+      "transferencia": "Demonstrada em null safety; parcial em Map.",
+      "pontuacao_maxima": null,
+      "pontuacao_qualidade_observada": null,
+      "pontuacao_efetiva": null
+    },
+    {
+      "id": "OF",
+      "tipo": "CENTRAL",
+      "descricao": "Diagnosticar a construção e o comportamento de interfaces Flutter.",
+      "peso_pedagogico_percentual": null,
+      "status": "DEMONSTRADO_COM_LACUNAS",
+      "cobertura_percentual": 100,
+      "qualidade_evidencia": "Básica no escopo diagnóstico: composição visual e conceito de StatefulWidget presentes; lacunas em setState com entrada, rota MaterialPageRoute e detalhes de jsonDecode.",
+      "autonomia": "PARCIALMENTE_AUTONOMO",
+      "ajuda_maxima": "SEM_AJUDA_DE_CONTEUDO",
+      "retencao": "NAO_AVALIADA_SEPARADAMENTE",
+      "transferencia": "Demonstrada em correção de atualização visual com setState.",
+      "pontuacao_maxima": null,
+      "pontuacao_qualidade_observada": null,
+      "pontuacao_efetiva": null
+    }
+  ],
+  "evidencias_pedagogicas": {
+    "D1": {
+      "classificacao": 1,
+      "resumo": "Identificou corretamente as saídas SEM NOME e LIA; explicação associou a nulidade e os operadores, mas não distinguiu com precisão String?, ?., e ??.",
+      "autonomia": "AUTONOMO"
+    },
+    "D2": {
+      "classificacao": 2,
+      "resumo": "Identificou o resultado [8] e explicou corretamente laço, condição maior que 4 e paridade.",
+      "autonomia": "AUTONOMO"
+    },
+    "D3": {
+      "classificacao": 2,
+      "resumo": "Implementou corretamente totalComDesconto e chamada com 100 e 15.",
+      "autonomia": "AUTONOMO"
+    },
+    "D4": {
+      "classificacao": 2,
+      "resumo": "Criou classe Produto, atributos, construtor, método resumo, objeto e chamada.",
+      "autonomia": "AUTONOMO"
+    },
+    "D5": {
+      "classificacao": 0,
+      "resumo": "Tentou atribuir Future<String> diretamente a String e não utilizou async/await.",
+      "autonomia": "AUTONOMO"
+    },
+    "D6": {
+      "classificacao": 2,
+      "resumo": "Corrigiu com apelido?.length ?? 0 e justificou o tratamento de null.",
+      "autonomia": "AUTONOMO"
+    },
+    "D7": {
+      "classificacao": 1,
+      "resumo": "Estrutura de Map, condição ternária e saída estavam coerentes, porém usou registro[nome] e registro[ativo] em vez das chaves literais 'nome' e 'ativo'.",
+      "autonomia": "AUTONOMO"
+    },
+    "F1": {
+      "classificacao": 2,
+      "resumo": "Identificou AppBar Produtos, conteúdo Catálogo, botão Atualizar e Column como organizador vertical.",
+      "autonomia": "AUTONOMO"
+    },
+    "F2": {
+      "classificacao": 2,
+      "resumo": "Construiu body com Column, Text e ElevatedButton chamando iniciar.",
+      "autonomia": "AUTONOMO"
+    },
+    "F3": {
+      "classificacao": 1,
+      "resumo": "Escolheu StatefulWidget e relacionou a escolha à mudança visual, mas não indicou setState para reconstrução da interface.",
+      "autonomia": "AUTONOMO"
+    },
+    "F4": {
+      "classificacao": 0,
+      "resumo": "Declarou não saber implementar TextField com atualização visual do estado.",
+      "autonomia": "SEM_EVIDENCIA"
+    },
+    "F5": {
+      "classificacao": 1,
+      "resumo": "Reconheceu Navigator.push e passou nomeProduto ao destino, mas omitiu a Route/MaterialPageRoute exigida pela assinatura usual.",
+      "autonomia": "AUTONOMO"
+    },
+    "F6": {
+      "classificacao": 1,
+      "resumo": "Usou jsonDecode e Text, porém acessou dados[titulo] em vez de dados['titulo'] e não indicou dart:convert.",
+      "autonomia": "AUTONOMO"
+    },
+    "F7": {
+      "classificacao": 2,
+      "resumo": "Identificou corretamente a necessidade de envolver contador++ em setState dentro de onPressed.",
+      "autonomia": "AUTONOMO"
+    }
+  },
+  "contadores": {
+    "atividades_obrigatorias": 14,
+    "atividades_apresentadas": 14,
+    "atividades_respondidas": 13,
+    "declaracoes_nao_sei": 1,
+    "atividades_interrompidas": 0,
+    "itens_dart": 7,
+    "itens_flutter": 7,
+    "classificacao_2_demonstrou": 7,
+    "classificacao_1_parcial": 5,
+    "classificacao_0_nao_demonstrou": 2,
+    "ajudas_de_conteudo": 0
+  },
+  "historico_atividades": [
+    {
+      "id": "D1",
+      "resultado": "PARCIAL"
+    },
+    {
+      "id": "D2",
+      "resultado": "DEMONSTROU"
+    },
+    {
+      "id": "D3",
+      "resultado": "DEMONSTROU"
+    },
+    {
+      "id": "D4",
+      "resultado": "DEMONSTROU"
+    },
+    {
+      "id": "D5",
+      "resultado": "NAO_DEMONSTROU"
+    },
+    {
+      "id": "D6",
+      "resultado": "DEMONSTROU"
+    },
+    {
+      "id": "D7",
+      "resultado": "PARCIAL"
+    },
+    {
+      "id": "F1",
+      "resultado": "DEMONSTROU"
+    },
+    {
+      "id": "F2",
+      "resultado": "DEMONSTROU"
+    },
+    {
+      "id": "F3",
+      "resultado": "PARCIAL"
+    },
+    {
+      "id": "F4",
+      "resultado": "NAO_SEI"
+    },
+    {
+      "id": "F5",
+      "resultado": "PARCIAL"
+    },
+    {
+      "id": "F6",
+      "resultado": "PARCIAL"
+    },
+    {
+      "id": "F7",
+      "resultado": "DEMONSTROU"
+    }
+  ],
+  "relatorio_diagnostico": {
+    "cobertura": "Dart 7/7; Flutter 7/7.",
+    "nivel_observado_dart": "INTERMEDIARIO",
+    "nivel_observado_flutter": "BASICO",
+    "classificacao_geral": "BASICO",
+    "competencias_demonstradas": [
+      "Interpretação de listas, condições e laços em Dart.",
+      "Criação de funções, classes, objetos e métodos em Dart.",
+      "Tratamento de nulidade com ?. e ??.",
+      "Leitura da árvore básica de widgets e composição com Column.",
+      "Uso conceitual de StatefulWidget e reconhecimento de setState para atualização visual."
+    ],
+    "dificuldades": [
+      "Future/async/await.",
+      "Acesso correto a chaves String em Map.",
+      "Atualização de TextField com estado e setState.",
+      "Navegação com Route/MaterialPageRoute.",
+      "Decodificação JSON completa e acesso correto por chave."
+    ],
+    "prioridades_estudo": [
+      "1. Estado em Flutter: setState, TextField/onChanged e reconstrução da interface.",
+      "2. Assincronismo em Dart: Future, async e await.",
+      "3. Navegação Flutter: Navigator.push e MaterialPageRoute.",
+      "4. Map e JSON: chaves String, jsonDecode e dart:convert.",
+      "5. Null safety: distinguir String?, ?., e ?? com precisão."
+    ]
+  },
+  "D20": "Diagnóstico concluído com cobertura integral das 14 situações obrigatórias.",
+  "H20": "Sem ajuda de conteúdo durante as questões, conforme regra do diagnóstico.",
+  "HA21": []
+}

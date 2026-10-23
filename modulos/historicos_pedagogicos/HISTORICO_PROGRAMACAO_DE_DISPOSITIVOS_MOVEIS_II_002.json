@@ -1,0 +1,70 @@
+{
+  "tipo": "HISTORICO_TUTORALUNO",
+  "schema": "HISTORICO_TUTORALUNO 1.0",
+  "tutor": "TutorAluno_028",
+  "prompt_base": "PB-2026-39",
+  "disciplina": "Programação para Dispositivos Móveis II",
+  "versao_historico": 2,
+  "controle_progressao": {
+    "modulos_concluidos": [
+      "00",
+      "03"
+    ],
+    "ultimo_modulo_trabalhado": "03",
+    "ultimo_modulo_concluido": "03",
+    "modulo_pendente": null,
+    "status_modulo_pendente": "NENHUM",
+    "proximo_modulo_liberado": "SIM",
+    "proximo_modulo_esperado": "PROXIMO_MODULO_FORNECIDO_PELO_ALUNO",
+    "acao_necessaria": "ENVIAR_PROXIMO_MODULO"
+  },
+  "perfil_pedagogico": {
+    "competencias_consolidadas": [
+      "Listas Flutter com ListView, ListTile e dados locais.",
+      "Navegação com Navigator.push e MaterialPageRoute.",
+      "StatefulWidget e setState para seleção e atualização de interface.",
+      "LayoutBuilder com breakpoint baseado no espaço disponível.",
+      "Padrão lista-detalhe em telas largas.",
+      "NavigationBar e NavigationRail com estado compartilhado.",
+      "Testes de interface em múltiplas dimensões e orientações."
+    ],
+    "competencias_em_desenvolvimento": [
+      "Escolha autônoma entre MediaQuery e LayoutBuilder.",
+      "Uso e justificativa de Expanded versus Flexible.",
+      "Definição e validação de breakpoints orientados pelo conteúdo.",
+      "Precisão conceitual sobre estado do widget e pilha de navegação."
+    ],
+    "dificuldades_recorrentes": [
+      "Acesso a chaves de Map com strings.",
+      "Identificação inicial de widgets adequados sem pistas.",
+      "Diferenciação entre índice recebido em callback e variável de estado."
+    ],
+    "erros_recorrentes": [
+      "Omissão de aspas ao acessar chaves de Map.",
+      "Tentativa inicial de atualizar estado sem setState.",
+      "Terminologia ocasionalmente imprecisa, como modal para painel e pilha para estado."
+    ],
+    "tendencia_autonomia": "CRESCENTE; após pistas curtas, aplica a correção e integra as partes em implementação funcional.",
+    "padrao_ajuda": "Responde bem à decomposição em pequenos passos, exemplos mínimos e nova tentativa imediata.",
+    "retencao": [
+      "Recuperou Navigator.push e MaterialPageRoute.",
+      "Aplicou setState em livroSelecionado e transferiu o padrão para secaoSelecionada."
+    ],
+    "transferencia": [
+      "Transferiu LayoutBuilder para cenário de janela maior com região interna menor.",
+      "Transferiu estado de seleção de livros para seleção de seções.",
+      "Usou resultados reais para defender o breakpoint."
+    ],
+    "pontos_para_revisao": [
+      "Map: chaves textuais usam aspas.",
+      "LayoutBuilder usa constraints do pai; MediaQuery consulta a janela.",
+      "setState sinaliza reconstrução da interface.",
+      "Estado do StatefulWidget não é a pilha de rotas do Navigator."
+    ],
+    "prerequisitos_futuros": [
+      "Continuar praticando estado local e composição de widgets.",
+      "Testar larguras próximas a breakpoints.",
+      "Observar overflow e legibilidade com conteúdos maiores."
+    ]
+  }
+}

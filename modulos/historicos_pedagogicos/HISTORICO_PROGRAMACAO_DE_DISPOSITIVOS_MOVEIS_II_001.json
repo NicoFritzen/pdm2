@@ -1,0 +1,69 @@
+{
+  "tipo": "HISTORICO_TUTORALUNO",
+  "schema": "HISTORICO_TUTORALUNO 1.0",
+  "tutor": "TutorAluno_028",
+  "prompt_base": "PB-2026-39",
+  "disciplina": "Programação de Dispositivos Móveis II",
+  "versao_historico": 1,
+  "controle_progressao": {
+    "modulos_concluidos": [
+      "00"
+    ],
+    "ultimo_modulo_trabalhado": "00",
+    "ultimo_modulo_concluido": "00",
+    "modulo_pendente": null,
+    "status_modulo_pendente": null,
+    "proximo_modulo_liberado": "SIM",
+    "proximo_modulo_esperado": "01",
+    "acao_necessaria": "ENVIAR_PROXIMO_MODULO"
+  },
+  "perfil_pedagogico": {
+    "competencias_consolidadas": [
+      "Interpretação de listas, laços e condições simples em Dart.",
+      "Criação de funções simples em Dart.",
+      "Criação de classes, objetos, construtores e métodos simples em Dart.",
+      "Tratamento prático de valor nulo com ?. e ??.",
+      "Leitura de estrutura básica de Scaffold, AppBar, Column, Text e ElevatedButton.",
+      "Composição vertical simples de widgets.",
+      "Reconhecimento de setState como mecanismo de atualização visual de estado local."
+    ],
+    "competencias_em_desenvolvimento": [
+      "Precisão conceitual entre String?, ?., e ??.",
+      "Manipulação de Map com chaves String.",
+      "Future, async e await.",
+      "StatefulWidget com entrada de texto e atualização de estado.",
+      "Navegação com Navigator e MaterialPageRoute.",
+      "Decodificação e acesso a JSON em Dart/Flutter."
+    ],
+    "dificuldades_recorrentes": [
+      "Detalhes sintáticos de acesso a Map/JSON por chave.",
+      "Completar padrões de APIs Flutter que exigem objetos intermediários, como Route.",
+      "Associar mudança de variável à reconstrução explícita da interface."
+    ],
+    "erros_recorrentes": [
+      "Uso de identificador sem aspas quando a intenção era acessar uma chave String.",
+      "Omissão de elementos necessários de uma API mesmo quando o conceito geral foi reconhecido."
+    ],
+    "tendencia_autonomia": "BOA_AUTONOMIA_EM_FUNDAMENTOS; NECESSITA_REFORCO_EM_ASSINCRONISMO_E_PADROES_DE_ESTADO/NAVEGACAO_FLUTTER",
+    "padrao_ajuda": "Modo GUIADO selecionado; nenhuma ajuda de conteúdo foi utilizada durante o diagnóstico.",
+    "retencao": [
+      "Não avaliada separadamente neste diagnóstico inicial."
+    ],
+    "transferencia": [
+      "Demonstrou transferência ao corrigir null safety em função.",
+      "Demonstrou transferência ao identificar setState como correção para atualização visual."
+    ],
+    "pontos_para_revisao": [
+      "Future/async/await.",
+      "TextField + onChanged + setState.",
+      "Navigator.push + MaterialPageRoute.",
+      "Map/JSON com chaves String e dart:convert.",
+      "Diferenças entre String?, ?., e ??."
+    ],
+    "prerequisitos_futuros": [
+      "Reforçar gerenciamento de estado local básico.",
+      "Reforçar assincronismo antes de fluxos que dependam de APIs/requisições.",
+      "Reforçar navegação e passagem de dados entre telas."
+    ]
+  }
+}

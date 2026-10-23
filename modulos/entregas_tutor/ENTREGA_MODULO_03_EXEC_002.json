@@ -1,0 +1,158 @@
+{
+  "tipo": "ENTREGA_TUTORALUNO",
+  "schema": "ENTREGA_TUTORALUNO 1.0",
+  "tutor": {
+    "arquivo": "TutorAluno_028",
+    "prompt_base_id": "PB-2026-TUTOR-39",
+    "prompt_base_versao": "PB-2026-39"
+  },
+  "disciplina": "Programação para Dispositivos Móveis II",
+  "modulo": {
+    "numero": "03",
+    "titulo": "Uma aplicação, várias telas",
+    "identificador": "PDMII-DESAFIO03-ADAPTACAO-2026-01"
+  },
+  "execucao": {
+    "identificador_execucao": "PDMII-M03-EXEC-002",
+    "token_original": "M1.sCYsrAVt4DpB5qKHd8ff0jGFtgf6wQ2Em7JQKO8-GsoyoglMgBSUpsrh0ZigzZNS4g18nIDT5h3c2NjBnBDWWJ3f2j8msZkTLTP2fDOoFZrDnQ3wRfbX5zgH9ose-352kEA7HsgZ-g7TlZfM9c4weYM-QFXAv6s6XcVmF6dQ9CUlJytpEahoJirqvmJk0bNQJsyxhs_MXSUsNQzTwgRAhdUkw4VuAavik_QAF388OAlHFKBg85SjzeqbVL4",
+    "status_modulo": "CONCLUIDO",
+    "motivo_encerramento": "P1-P3, I1-I3, N1-N3 e T1-T3 concluídas com código autoral, testes e defesa.",
+    "conclusao_pedagogica": "SIM",
+    "tipo_entrega": "COMPLETA",
+    "progresso_pedagogico_percentual": 100,
+    "percentual_efetivamente_realizado": 100
+  },
+  "avaliacao_cobertura": {
+    "atividades_obrigatorias_previstas": 12,
+    "atividades_obrigatorias_realizadas": 12,
+    "objetivos_centrais_previstos": 4,
+    "objetivos_centrais_atendidos": 4,
+    "cinco_situacoes_do_enunciado_testadas": "SIM",
+    "codigo_autoral_apresentado": "SIM",
+    "resultados_observaveis_apresentados": "SIM"
+  },
+  "mapa_objetivos": [
+    {
+      "objetivo": "O1",
+      "status": "ATENDIDO",
+      "evidencias": [
+        "Catálogo fixo de 4 livros.",
+        "Compacto com rota de detalhe; largo com lista-detalhe.",
+        "Breakpoint inicial de 700 px justificado e testado."
+      ]
+    },
+    {
+      "objetivo": "O2",
+      "status": "ATENDIDO",
+      "evidencias": [
+        "Distinguiu MediaQuery e LayoutBuilder após correção guiada.",
+        "Implementou LayoutBuilder com constraints.maxWidth >= 700.",
+        "Aplicou Expanded e flex 1:2, sem overflow observado."
+      ]
+    },
+    {
+      "objetivo": "O3",
+      "status": "ATENDIDO",
+      "evidencias": [
+        "NavigationBar no compacto e NavigationRail no largo.",
+        "secaoSelecionada compartilhada com setState.",
+        "livroSelecionado preservado ao redimensionar."
+      ]
+    },
+    {
+      "objetivo": "O4",
+      "status": "ATENDIDO",
+      "evidencias": [
+        "Previsões antes dos testes.",
+        "Testes reais cobriram as cinco situações exigidas.",
+        "Caso limítrofe 699/700 px testado e breakpoint defendido."
+      ]
+    }
+  ],
+  "evidencias_pedagogicas": {
+    "P1": "Quatro livros com título e autor; mesmo conjunto em todas as larguras.",
+    "P2": "Compacto: lista abre detalhe em nova rota. Largo: lista e detalhe simultâneos.",
+    "P3": "700 px escolhido por legibilidade e tratado como hipótese testável.",
+    "I1": "Após feedback, reconheceu LayoutBuilder para decisão baseada no espaço recebido pelo widget.",
+    "I2": "Implementou StatefulWidget, LayoutBuilder, Navigator.push/MaterialPageRoute e lista-detalhe com seleção por índice.",
+    "I3": "Explicou Expanded, aplicou flex 1:2 e validou o resultado visual.",
+    "N1": "Adotou NavigationBar inferior no compacto e NavigationRail lateral no largo.",
+    "N2": "Implementou Livros/Autores com estado compartilhado e setState.",
+    "N3": "Testou preservação de Great Expectations ao reduzir e ampliar a janela.",
+    "T1": "Previu 375x667, 393x852, 852x393 e 768x1024.",
+    "T2": {
+      "375x667": "Compacto, detalhe correto, sem overflow.",
+      "393x852": "Compacto, sem overflow ou perda de seleção.",
+      "852x393": "Largo, sem problema de espaço.",
+      "768x1024": "Largo, quebra de texto legível, sem overflow."
+    },
+    "T3": "699/700 px relatado como confortável; defendeu adaptação pela mudança de detalhes e navegação."
+  },
+  "contadores": {
+    "atividades_concluidas": 12,
+    "testes_reais_registrados": 6
+  },
+  "historico_atividades": [
+    {
+      "atividade": "P1",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "P2",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "P3",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "I1",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "I2",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "I3",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "N1",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "N2",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "N3",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "T1",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "T2",
+      "status": "CONCLUIDA"
+    },
+    {
+      "atividade": "T3",
+      "status": "CONCLUIDA"
+    }
+  ],
+  "D20": "Módulo concluído com implementação adaptável, navegação coerente e testes observáveis.",
+  "H20": "Evolução demonstrada em layout adaptável, estado, navegação e validação de breakpoint.",
+  "HA21": [
+    "Revisar MediaQuery x LayoutBuilder.",
+    "Reforçar estado x pilha de navegação.",
+    "Praticar Expanded/Flexible e breakpoints."
+  ],
+  "compatibilidade": {
+    "modulo_declara_tutor": "TutorAluno_029",
+    "modulo_declara_base": "PB-2026-40",
+    "resultado": "COMPATIVEL",
+    "motivo": "O módulo declara compatibilidade com a família TutorAluno e contrato funcional sem versão fixa."
+  }
+}
