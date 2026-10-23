@@ -1,0 +1,176 @@
+{
+  "tipo": "ENTREGA_TUTORALUNO",
+  "schema": "ENTREGA_TUTORALUNO 1.0",
+  "tutor": {
+    "arquivo": "TutorAluno_031",
+    "prompt_base_id": "PB-2026-TUTOR-42",
+    "prompt_base_versao": "PB-2026-42"
+  },
+  "disciplina": "Programação para Dispositivos Móveis II",
+  "modulo": {
+    "numero": "04",
+    "titulo": "Animação com propósito",
+    "identificador": "PDMII-DESAFIO04-ANIMACAO-2026-01"
+  },
+  "execucao": {
+    "identificador_execucao": "MOD04_EXEC_001",
+    "token_original": "M1.CbTsarpjtnqVrjWTqpUWsXXtdvFhZyZxTXdgmHucpt6uYdPlDv2TRNHndyMEB_2E0Gq57GNJlUCaKfFEDn20D6UEyaHOoKucBqPr991nPOw4embq2-MRrrMDjtSO2d2lEeJU_13ERJGJ--vAWJBKaflnqNwS53vTHeDPDyGHS2eFHDwH-FKsTTyjgDIRbchgKaeaRhLqI3zryXpTiGPBsMpdaof3dj7yJeG-ohhb56OibeXmlblqldTxZtE",
+    "status_modulo": "CONCLUIDO",
+    "motivo_encerramento": "Solicitação ENTREGAR após conclusão das atividades e testes relatados",
+    "conclusao_pedagogica": "SIM",
+    "tipo_entrega": "COMPLETA",
+    "progresso_pedagogico_percentual": 100,
+    "percentual_efetivamente_realizado": 100
+  },
+  "avaliacao_cobertura": {
+    "desempenho_trecho_realizado": "Objetivos demonstrados em respostas, código parcial e testes relatados; aplicativo não inspecionado diretamente.",
+    "objetivos_centrais_trabalhados_percentual": 100,
+    "objetivos_centrais_demonstrados_percentual": 100,
+    "objetivos_secundarios_demonstrados_percentual": null,
+    "objetivos_preparatorios_demonstrados_percentual": null,
+    "teto_por_progresso_0_10": 10,
+    "teto_por_objetivo_central_0_10": 10,
+    "nota_final_tecnica_0_10": null
+  },
+  "mapa_objetivos": [
+    {
+      "id": "O1",
+      "tipo": "CENTRAL",
+      "descricao": "Planejar duas transições funcionais distintas",
+      "status": "DEMONSTRADO_COM_TESTES_RELATADOS",
+      "cobertura_percentual": 100,
+      "qualidade_evidencia": "P1–P3: escolheu seleção e carregamento; rejeitou movimento decorativo; justificou abordagem implícita e explícita.",
+      "autonomia": "MISTA; respostas autorais com dicas graduais",
+      "ajuda_maxima": "DICAS_GRADUAIS",
+      "retencao": null,
+      "transferencia": "Aplicação no projeto Flutter de livros",
+      "pontuacao_maxima": null,
+      "pontuacao_qualidade_observada": null,
+      "pontuacao_efetiva": null
+    },
+    {
+      "id": "O2",
+      "tipo": "CENTRAL",
+      "descricao": "Implementar animação implícita",
+      "status": "DEMONSTRADO_COM_TESTES_RELATADOS",
+      "cobertura_percentual": 100,
+      "qualidade_evidencia": "I1–I3: AnimatedContainer, 200 ms, Curves.easeInOut, setState; teste de seleção relatado.",
+      "autonomia": "MISTA; respostas autorais com dicas graduais",
+      "ajuda_maxima": "DICAS_GRADUAIS",
+      "retencao": null,
+      "transferencia": "Aplicação no projeto Flutter de livros",
+      "pontuacao_maxima": null,
+      "pontuacao_qualidade_observada": null,
+      "pontuacao_efetiva": null
+    },
+    {
+      "id": "O3",
+      "tipo": "CENTRAL",
+      "descricao": "Implementar animação explícita",
+      "status": "DEMONSTRADO_COM_TESTES_RELATADOS",
+      "cobertura_percentual": 100,
+      "qualidade_evidencia": "E1–E3: dispose, Tween 1.0–1.3, repeat(reverse: true), ScaleTransition, reset e carregamento; execução relatada.",
+      "autonomia": "MISTA; respostas autorais com dicas graduais",
+      "ajuda_maxima": "DICAS_GRADUAIS",
+      "retencao": null,
+      "transferencia": "Aplicação no projeto Flutter de livros",
+      "pontuacao_maxima": null,
+      "pontuacao_qualidade_observada": null,
+      "pontuacao_efetiva": null
+    },
+    {
+      "id": "O4",
+      "tipo": "CENTRAL",
+      "descricao": "Testar, comparar e defender o propósito",
+      "status": "DEMONSTRADO_COM_TESTES_RELATADOS",
+      "cobertura_percentual": 100,
+      "qualidade_evidencia": "Repetição, guarda contra concorrência, persistência da seleção e comparação T1–T3; testes relatados.",
+      "autonomia": "MISTA; respostas autorais com dicas graduais",
+      "ajuda_maxima": "DICAS_GRADUAIS",
+      "retencao": null,
+      "transferencia": "Aplicação no projeto Flutter de livros",
+      "pontuacao_maxima": null,
+      "pontuacao_qualidade_observada": null,
+      "pontuacao_efetiva": null
+    }
+  ],
+  "evidencias_pedagogicas": {
+    "fonte": "Respostas do aluno e relatos de testes nesta conversa; sem acesso ao código completo ou execução independente.",
+    "trechos_autorais": [
+      "@override void dispose() { _controller.dispose(); super.dispose(); }",
+      "Tween<double>(begin: 1.0, end: 1.3)",
+      "_controller.reset(); setState(() { carregando = false; });",
+      "true para marcar carregamento ativo; cláusula de guarda implementada segundo relato"
+    ],
+    "testes_relato": [
+      "AnimatedContainer com seleção visual suave",
+      "Ícone pulsou durante carregamento e desapareceu ao finalizar",
+      "Segundo clique ignorado durante carregamento; recarga posterior permitida",
+      "Seleção persistiu após recarga e nova seleção alterou a cor"
+    ],
+    "limitacoes": [
+      "Código completo não anexado",
+      "Execução Flutter não inspecionada independentemente",
+      "Métricas de tentativas/ajudas não auditadas integralmente"
+    ]
+  },
+  "contadores": {
+    "tentativas_totais": null,
+    "ajudas_totais": null,
+    "atividades_obrigatorias_cobertas": [
+      "P1",
+      "P2",
+      "P3",
+      "I1",
+      "I2",
+      "I3",
+      "E1",
+      "E2",
+      "E3",
+      "T1",
+      "T2",
+      "T3"
+    ]
+  },
+  "historico_atividades": [
+    {
+      "etapa": "P1–P3",
+      "evidencias": [
+        "Projeto de livros do módulo 03",
+        "Duas finalidades distintas: seleção e carregamento",
+        "Justificou escolha das abordagens"
+      ]
+    },
+    {
+      "etapa": "I1–I3",
+      "evidencias": [
+        "indiceLivroSelecionado, setState e AnimatedContainer",
+        "200ms e Curves.easeInOut",
+        "Teste relatado de transição e comparação com 3s"
+      ],
+      "ajuda": "Dicas de sintaxe e duração"
+    },
+    {
+      "etapa": "E1–E3",
+      "evidencias": [
+        "dispose correto",
+        "Tween 1.0–1.3 e repetição reversa",
+        "ScaleTransition e reset",
+        "Teste relatado de pulsação e guarda contra concorrência"
+      ],
+      "ajuda": "Dicas graduais para concorrência"
+    },
+    {
+      "etapa": "T1–T3",
+      "evidencias": [
+        "Comparou abordagens",
+        "Avaliou feedback visual",
+        "Criticou duração excessiva e pulsação contínua",
+        "Relatou teste integrado com persistência de seleção"
+      ]
+    }
+  ],
+  "D20": null,
+  "H20": null,
+  "HA21": []
+}

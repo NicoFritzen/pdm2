@@ -4,11 +4,7 @@ App Flutter do Desafio 2 (PDM2): cadastro de itens (nome, categoria, descrição
 e imagem) com formulário, validação, `ListView`, navegação e persistência
 local em SQLite.
 
-Campos do desafio: **nome, categoria, descrição e imagem**. O app não mostra
-data de criação/atualização.
-
-O guia (ER, arquitetura, sequência, `copyImageToAppDir` e onde a foto fica no
-celular) está em [docs/crud-sqlite.md](docs/crud-sqlite.md).
+Campos do desafio: **nome, categoria, descrição e imagem**.
 
 ## Executar
 
@@ -31,7 +27,6 @@ Rode em um **aparelho ou emulador** Android/iOS. Não há suporte a desktop.
 O SQLite **não** guarda a foto: a coluna `image_path` é `TEXT` (o caminho).
 Os bytes JPEG/PNG ficam num arquivo na pasta privada do app. O app Arquivos
 não vê essa pasta (sandbox do Android). Detalhe:
-[docs/crud-sqlite.md](docs/crud-sqlite.md#o-que-o-sqlite-guarda-não-é-a-foto).
 
 ## Onde está cada parte
 
